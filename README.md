@@ -1,21 +1,22 @@
+Hi，大家好，这是我平时学习过程中的积累，欢迎大家关注。
 # Vue.js是一套构建用户界面的框架
 能够帮助我们减少不必要的DOM操作；提高渲染效率；双向数据绑定的概念，通过
 框架提供的指令，我们前端程序员只需要关心数据的业务逻辑，不再关心DOM是如何渲染的了
 在Vue中，一个核心的概念，就是让用户不再操作DOM元素，解放了用户的双手，让程序员可以更多的时间去关注业务逻辑；
 # vue基本
-  vue基本指令
+# vue基本指令
 插值表达式{{}}，v-cloak，v-text，v-html
-v-bind 绑定数据
- 条件渲染
+# v-bind 绑定数据
+# 条件渲染
 v-if
 v-else
 v-else-if
 v-show 
- 列表渲染
+# 列表渲染
 v-for
-数组更新检测
+# 数组更新检测
 data中的数据改变会引起视图改变MVVM
-变异方法--改变原数组，引起视图更新
+# 变异方法--改变原数组，引起视图更新
 1.push（）
 例如：
 data （） {
@@ -28,14 +29,14 @@ this.names.push（'ti'）
 5.sort（）
 6.reverse（）
 
-替换数组--不改变数组，重新生成新的数组，所以不会改变视图变化
+# 替换数组--不改变数组，重新生成新的数组，所以不会改变视图变化
 1.filter(function() {
     return  numbers /2 === 0;
 })
 2.concat()
 3.slice()
 
-显示过滤/排序结果
+# 显示过滤/排序结果
 <li v-for="n in evenNumbers">{{ n }}</li>
 方法一 创建返回过滤或排序数组的计算属性
 data: {
@@ -62,11 +63,11 @@ methods: {
 }
 
 
- 事件监听
+# 事件监听
 v-on  
 methods 
 事件参数
- 事件修饰符：
+ # 事件修饰符：
 @click.stop  阻止冒泡
 @click.prevent    阻止默认行为
 @click.capture     实现捕获触发事件的机制
@@ -75,9 +76,9 @@ methods
 @click.once 只触发一次事件处理函数 
 <a href="http://www.baidu.com" @click.prevent.once="linkClick">
 
- 按键修饰符
+ # 按键修饰符
 @keyup
-常用按键有
+# 常用按键有
 .enter 按enter键触发
 <input type="text" @keyup.enter="linkClick">                                      .delete (捕获删除和退格键)
 .esc
@@ -98,7 +99,7 @@ computed ： {
     }
 }
 
-基础例子
+# 基础例子
 <div id="example">
   <p>Original message: "{{ message }}"</p>
   <p>Computed reversed message: "{{ reversedMessage }}"</p>
@@ -120,11 +121,11 @@ var vm = new Vue({
 Original message: "Hello"
 Computed reversed message: "olleH"
 
-计算属性与methods区别
+# 计算属性与methods区别
 我们可以将同一函数定义为一个方法而不是一个计算属性。两种方式的最终结果确实是完全相同的。然而，不同的是计算属性是基于它们的依赖进行缓存的。只在相关依赖发生改变时它们才会重新求值。这就意味着只要 message 还没有发生改变，多次访问 reversedMessage 计算属性会立即返回之前的计算结果，而不必再次执行函数。
 
 
-侦听器：实时获取数据watch方法---避免使用watch，放在输入框中使用比较合适
+# 侦听器：实时获取数据watch方法---避免使用watch，放在输入框中使用比较合适
  watch: {
     // 如果 `question` 发生改变，这个函数就会运行
     question: function (newQuestion, oldQuestion) {
@@ -141,7 +142,8 @@ v-model 指令在表单 <input>、<textarea> 及 <select> 元素上创建双向�
 <p style="white-space: pre-line;">{{ message }}</p>
 <br>
 <textarea v-model="message" placeholder="add multiple lines"></textarea>
-修饰符
+
+# 修饰符
 .lazy
 在默认情况下，v-model 在每次 input 事件触发后将输入框的值与数据进行同步 (除了上述输入法组合文字时)。你可以添加 lazy 修饰符，从而转变为使用 change 事件进行同步：
 <!-- 在“change”时而非“input”时更新 -->
