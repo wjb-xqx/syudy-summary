@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- html部分 -->
+    掌握一些常用标签的使用和他们的各个属性：
+    html：页面的根元素。
+    head：页面的头部标签，是所有头部元素的容器。
+    body：页面的主体标签，页面展现的内容就放置在这里面。
+    title：页面的标题。
+    meta：位于文档的头部，提供页面的元信息，包括关键字、描述等等。
+    link：定义文档与外部资源的关系，最常用的用途就是引入样式表。
+    script：脚本标签，可以把js脚本代码放置在这个标签内，也可以使用这个标签的src属性引入一个外部标签。
+    style：样式标签，可以把css代码写在这个标签中。
+    a：超链接，href属性代表要链接到的地方，target属性代表打开方式。
+    img：图像标签，src属性表示图片的位置。
+    form：表单元素，它内部的input、select、textarea等标签都是比较重要的。
+    div：定义文档中的分区或节，可以使用div来进行页面的布局等操作。
+    另外还有ul、li、p、button、iframe、p、table等标签也很常用，
+    nav、section、article、header、aside、footer等语义化标签也需要了解一下。
+
+    了要了解上面这一些标签之外，还需要对一些新的HTML5的API有一定的了解：
+    audio、video标签。
+    Canvas：定义图形，比如图表和其他图像。
+    input标签的accept属性，email、phone、url等类型。
+    getElementByClassName根据class名来获取一个元素结点。
+    Multiple file selection多文件选择属性。
+    html的import、template
+    process标签，webGL等内容。
+
+    还有一些要知道的知识点：
+
+    1.doctype的作用。声明web 浏览器关于页面使用HTML 版本进行编写的指令
+    2.unicode、utf8等编码的原理和区别。
+    3.如何进行页面性能优化。
+    4.png、jpg、webp、gif等图片格式的不同的优势。
+    5.HTML行内元素与块级元素的区别。
+    6.移动web端开发常用head标签。
+    7.web语义化。
+    8.浏览器中的缓存原理
+
+    <!-- css部分 -->
+    关于css这一块，我的看法就是网上下载一个chm格式的css的参考手册，然后根据手册里面写的一个个的都敲一下。
+
+    css大体分为下面这几块知识点：
+    ① 定位布局
+    1.position属性的7个值（static | relative | absolute | fixed | center | page | sticky）分别有什么作用和不同？
+    2.实现品字形布局或者是三栏布局（左右宽度固定，中间适应屏幕）。
+    3.浮动与清除浮动的方法，flex布局，grid布局。
+
+    ② 盒子模型
+    1.margin、padding、border这三个属性。
+    2.伸缩盒相关内容。
+    3.Multi-column Layout Module多列布局模型。
+
+    ③ 文本字体
+    1.强制换行与不换行，清除空白。
+    2.文本对齐、大小（如何设置chrome小于12px的字体）、缩进、转换。
+    3.单位（em、rem、px等），颜色（rgb、rgba，hls）。
+
+    ④ 变换、过渡和动画
+    1.transform的各种取值的作用与兼容性。
+    2.transition过渡的动画类型，贝塞尔曲线的原理。
+    3.animation动画的各种设置，@keyframes规则。
+    4.浏览器的重绘与重排。
+
+    ⑤ 选择器
+    1.选择器的分类，权值和优先级。
+    2.有哪些属性可以被继承，哪些属性没法继承。
+    3.伪类和伪元素分别是什么，有什么作用。
+
+    上面这些都是基础的东西，除了这些基础的内容之外需要了解Less、Sass、stylus等css预处理器，这将会大幅度提升你的css开发效率，也需要了解一下Autoprefixer、PostCSS等css后处理器。
+
+    <!-- javascript部分 -->
+
+    在这里就不说js的基础知识了，我把js按照语法的层次和使用的层次分为了两大块。
+
+    按照语法的层次来说：
+    首先是javascript的面向对象方面的内容：在javascript中实现封装、继承和多态。
+    ① 封装：在js中可以通过闭包、作用域和作用域链来实现封装，ES6的const、let的作用。
+    ② 继承：基于原型链的继承、基于构造函数的继承、组合式继承、寄生式继承等，外加ES6的class关键字，prototype和__proto__。
+    ③ 多态：在javascript中多态是使用arguments来实现的，关于arguments会引申出来很多内容：
+
+    1.arguments的caller、callee等方法的作用。
+    2.方法的apply和call的作用和不同。
+    3.使用Array.prototype.slice.call来把一个数组对象转化为数组。
+    4.array的各种方法，如shift、splice、push、filter、map、reduce、forEach等等。
+
+    然后是Js的设计模式，比如说那三种工厂模式啊，建造者模式啊等等。
+    最后是在不同情况下的this分别都代表什么。
+
+    按照使用的层次来说：
+    首先最主要的就是ajax，ajax的原理，ajax跨域的方法：jsonp、使用iframe的location.hash、postMessageAPI、websocket、服务器代理等等。
+    然后是tcp协议、udt协议以及http协议的协议头、状态码等内容。
+    浏览器的缓存，客户端存储方面的内容：localstorage、sessionstorage、indexDB、cookie等等。
+    最后是一些新的js的API，例如文件读取（fileReader）、fetch、Promise、Web Sockets等等内容，
+    可以去caniuse上面看一下有哪些新的东西。
+</body>
+</html>
